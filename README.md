@@ -1,3 +1,4 @@
+- Build with: `boot cljs target`
 
 # Resources
 
