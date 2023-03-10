@@ -1,4 +1,5 @@
 - Build with: `boot cljs target`
+- Run with: `boot serve -d target watch cljs target`
 
 # Resources
 

@@ -1,3 +1,5 @@
+; vi: ft=clojure
+
 (set-env!
   :source-paths #{"src/cljs"}
   :resource-paths #{"html"}
