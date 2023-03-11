@@ -9,19 +9,19 @@
   [adzerk/boot-cljs "1.7.228-2"]
   [javax.xml.bind/jaxb-api "2.3.0"]
   [pandeiro/boot-http "0.7.6"]
-  [org.clojure/tools.nrepl "0.2.12"] ;;required in order to make boot-http works
+  [org.clojure/tools.nrepl "0.2.12"]
   [adzerk/boot-reload "0.5.1"]
   [adzerk/boot-cljs-repl "0.3.3"]
   [com.cemerick/piggieback "0.2.1"]
+  [org.clojars.magomimmo/domina "2.0.0-SNAPSHOT"]
   [weasel "0.7.0"]])
 
 (require '[adzerk.boot-cljs :refer [cljs]]
-'[pandeiro.boot-http :refer [serve]]    ;; make serve task visible
+'[pandeiro.boot-http :refer [serve]]
 '[adzerk.boot-reload :refer [reload]]
 '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]])
 
 
-;; define dev task as composition of subtasks
 (deftask dev
   "Launch Immediate Feedback Development Environment"
   []
@@ -29,6 +29,6 @@
     (serve :dir "target")
     (watch)
     (reload)
-    (cljs-repl) ;; before cljs task
+    (cljs-repl)
     (cljs)
     (target :dir #{"target"})))
